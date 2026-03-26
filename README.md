@@ -1,17 +1,44 @@
-# curso_desarrollo_movil
+# Curso Desarrollo Movil 
 
-A new Flutter project.
+## Taller 1: Fundamentos de Flutter y Manejo de Estado
 
-## Getting Started
+### **Descripción del Taller**
+Este taller consiste en el desarrollo de una aplicación móvil básica en Flutter usando componentes como los siguientes:
 
-This project is a starting point for a Flutter application.
+- **Manejo de Estado:** Uso de StatefulWidget y la función setState() para actualizar la interfaz en tiempo real
 
-A few resources to get you started if this is your first Flutter project:
+- **Layouts:** Organización de elementos mediante Column, Row, Padding y SizedBox
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **Widgets de Imagen:** Implementación de imágenes desde la red (Image.network) y desde activos locales (Image.asset)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Interactividad:** Uso de botones (ElevatedButton) y retroalimentación al usuario mediante SnackBar
+
+- **Widgets Adicionales:** Implementación de un Container con diseño personalizado y un ListView para mostrar colecciones de datos
+
+### **Pasos para Ejecutar**
+Sigue estos pasos para ejecutar la aplicacion de flutter en local
+
+- **Asegurar dependencias:** Abre una terminal en la raíz del proyecto y descarga los paquetes necesarios:
+
+```Bash
+flutter pub get
+```
+- **Verificar dispositivos:** Asegúrate de tener un emulador encendido o un dispositivo físico conectado:
+
+```Bash
+flutter devices
+```
+
+- **Lanzar la aplicación:** Ejecuta el proyecto en modo debug:
+
+```Bash
+flutter run
+```
+ 
+### Datos del Estudiante
+
+- **Nombre Completo:** German Andres Rojas Cardona
+
+- **Codigo de Estudiante:** 230231044
+
+- **Materia:** Electiva Profesional 1 - Desarrollo Movil
