@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:isolate';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import '../../widgets/base_view.dart';
 
@@ -60,13 +60,10 @@ class _IsolateViewState extends State<IsolateView> {
       final puertoReceptor = message[1] as SendPort; // Canal para responder
 
       int counter = 0;
-      for (int i = 1; i <= 1000; i++) {
+      // Bucle 100 millones
+      for (int i = 0; i <= 100000000; i++) {
         counter += i;
-        if (kDebugMode) {
-          print("Isolate contando: $i");
-        }
       }
-
       puertoReceptor.send(
         "Tarea completada. Suma : $counter.\nMensaje recibido: '$data'",
       );
