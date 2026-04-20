@@ -85,6 +85,14 @@ class CustomDrawer extends StatelessWidget {
               context.go('/future');
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.timer_outlined),
+            title: const Text('Cronometro'),
+            onTap: () {
+              context.go('/timer');
+              Navigator.pop(context);
+            },
+          ),
         ],
       ),
     );
