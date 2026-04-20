@@ -1,4 +1,4 @@
-import 'package:actividad_clase/routes/app_router.dart';
+import 'package:taller2/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'themes/app_theme.dart'; // Importar el tema
 

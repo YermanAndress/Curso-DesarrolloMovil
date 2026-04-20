@@ -60,7 +60,7 @@ class _FutureViewState extends State<FutureView> {
 
     if (!mounted) return;
 
-    print("3. Después: Datos asignados a la UI."); // Consola
+    print("2. Después: Datos asignados a la UI."); // Consola
     setState(() {
       _nombres = datos;
     });
