@@ -1,12 +1,12 @@
 import 'package:go_router/go_router.dart';
 
-import 'package:actividad_clase/views/paso_parametros/paso_parametros_screen.dart';
-import 'package:actividad_clase/views/paso_parametros/detalle_screen.dart';
-import 'package:actividad_clase/views/ciclo_vida/ciclo_vida_screen.dart';
-import 'package:actividad_clase/views/isolate/isolate_view.dart';
-import 'package:actividad_clase/views/future/future_view.dart';
-import 'package:actividad_clase/views/home/home_screen.dart';
-import 'package:actividad_clase/views/timer/timer_view.dart';
+import 'package:taller2/views/paso_parametros/paso_parametros_screen.dart';
+import 'package:taller2/views/paso_parametros/detalle_screen.dart';
+import 'package:taller2/views/ciclo_vida/ciclo_vida_screen.dart';
+import 'package:taller2/views/isolate/isolate_view.dart';
+import 'package:taller2/views/future/future_view.dart';
+import 'package:taller2/views/home/home_screen.dart';
+import 'package:taller2/views/timer/timer_view.dart';
 
 final GoRouter appRouter = GoRouter(
   routes: [
