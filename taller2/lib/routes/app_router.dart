@@ -1,10 +1,12 @@
 import 'package:go_router/go_router.dart';
-import 'package:actividad_clase/views/ciclo_vida/ciclo_vida_screen.dart';
-import 'package:actividad_clase/views/home/home_screen.dart';
-import 'package:actividad_clase/views/paso_parametros/detalle_screen.dart';
+
 import 'package:actividad_clase/views/paso_parametros/paso_parametros_screen.dart';
-import 'package:actividad_clase/views/future/future_view.dart';
+import 'package:actividad_clase/views/paso_parametros/detalle_screen.dart';
+import 'package:actividad_clase/views/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:actividad_clase/views/isolate/isolate_view.dart';
+import 'package:actividad_clase/views/future/future_view.dart';
+import 'package:actividad_clase/views/home/home_screen.dart';
+import 'package:actividad_clase/views/timer/timer_view.dart';
 
 final GoRouter appRouter = GoRouter(
   routes: [
@@ -46,6 +48,11 @@ final GoRouter appRouter = GoRouter(
       path: '/future',
       name: 'future',
       builder: (context, state) => const FutureView(),
+    ),
+    GoRoute(
+      path: '/timer',
+      name: 'timer',
+      builder: (context, state) => const TimerView(),
     ),
   ],
 );
