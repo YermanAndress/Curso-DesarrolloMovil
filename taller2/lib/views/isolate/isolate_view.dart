@@ -1,5 +1,5 @@
-import 'dart:async';
 import 'dart:isolate';
+import 'dart:async';
 
 import 'package:flutter/material.dart';
 import '../../widgets/base_view.dart';
