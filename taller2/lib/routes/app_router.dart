@@ -8,6 +8,11 @@ import 'package:taller2/views/future/future_view.dart';
 import 'package:taller2/views/home/home_screen.dart';
 import 'package:taller2/views/timer/timer_view.dart';
 
+import 'package:taller2/views/pokemons/pokemon_detail_view.dart';
+import 'package:taller2/views/pokemons/pokemon_list_view.dart';
+
+import 'package:taller2/views/parqueadero/parqueadero_list_view.dart';
+
 final GoRouter appRouter = GoRouter(
   routes: [
     GoRoute(
@@ -53,6 +58,27 @@ final GoRouter appRouter = GoRouter(
       path: '/timer',
       name: 'timer',
       builder: (context, state) => const TimerView(),
+    ),
+    //!Ruta para http
+    GoRoute(
+      path: '/pokemons',
+      name: 'pokemons',
+      builder: (context, state) => const PokemonListView(),
+    ),
+    //!Ruta para detalle de pokemones
+    GoRoute(
+      path: '/pokemon/:name', // se recibe el nombre del pokemon como parametro
+      name: 'pokemon_detail',
+      builder: (context, state) {
+        final name =
+            state.pathParameters['name']!; // se captura el nombre del pokemon.
+        return PokemonDetailView(name: name);
+      },
+    ),
+    GoRoute(
+      path: '/parqueadero',
+      name: 'parqueadero',
+      builder: (context, state) => const ParqueaderoListView(),
     ),
   ],
 );
