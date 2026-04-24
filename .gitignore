@@ -12,6 +12,7 @@
 # --- Android ---
 **/android/local.properties
 **/android/app/debug/
+**/android/app/src/debug/
 **/android/app/profile/local
 **/android/app/release/
 **/android/gradlew
@@ -48,3 +49,6 @@
 **/migrate_working_dir/
 **/app.*.symbols
 **/app.*.map.json
+
+# --- Entornos De Desarrollo ---
+**/.env
