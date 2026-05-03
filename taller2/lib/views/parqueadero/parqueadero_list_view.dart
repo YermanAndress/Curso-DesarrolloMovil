@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../models/parqueadero.dart';
 import '../../services/parqueadero_service.dart';
@@ -50,46 +49,41 @@ class _ParqueaderoListViewState extends State<ParqueaderoListView> {
                   ),
                   //* gestureDetector se utiliza para detectar gestos del usuario
                   //* en este caso se utiliza para navegar a la vista de detalle del Parqueadero
-                  child: GestureDetector(
-                    onTap: () {
-                      context.push('/parqueadero/${parqueadero.nombre}');
-                    },
-                    child: Card(
-                      elevation: 4,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Row(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(12.0),
-                              child: Image.network(
-                                parqueadero.logo,
-                                width: 80,
-                                height: 80,
-                                fit: BoxFit.cover,
-                              ),
+                  child: Card(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12.0),
+                            child: Image.network(
+                              parqueadero.logo,
+                              width: 80,
+                              height: 80,
+                              fit: BoxFit.cover,
                             ),
-                            const SizedBox(width: 16.0),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    parqueadero.nombre.toUpperCase(),
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                          ),
+                          const SizedBox(width: 16.0),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  parqueadero.nombre.toUpperCase(),
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                            const Icon(Icons.chevron_right),
-                          ],
-                        ),
+                          ),
+                          const Icon(Icons.chevron_right),
+                        ],
                       ),
                     ),
                   ),
