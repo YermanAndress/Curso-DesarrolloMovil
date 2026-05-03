@@ -20,18 +20,19 @@ class ParqueaderoService {
     );
 
     if (response.statusCode == 200) {
-      final data = json.decode(response.body);
+      final Map<String, dynamic> data = json.decode(response.body);
 
-      final List results = data['results']; // se obtiene la lista de resultados
+      // La respuesta viene en data['data']
+      final List<dynamic> parqueaderosJson = data['data'] ?? [];
 
-      //! Se mapea la lista de resultados para obtener el detalle de cada Parqueadero
-      List<Future<Parqueadero>> futures = results.map((item) {
-        //retorna una lista de los detalles de cada parqueaderoz
-        return getParqueaderoById(item['id']);
-      }).toList();
-      return Future.wait(futures);
+      // Mapeo directo sin peticiones adicionales
+      return parqueaderosJson
+          .map((item) => Parqueadero.fromJSON(item as Map<String, dynamic>))
+          .toList();
     } else {
-      throw Exception('Error al obtener la lista de Parqueaderos.');
+      throw Exception(
+        'Error al obtener la lista de Parqueaderos: ${response.statusCode}',
+      );
     }
   }
 
