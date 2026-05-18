@@ -8,11 +8,17 @@
 **/doc/api/
 **/pub/
 **/coverage/
+**/.pub/
+**/.atom/
+**/.build/
+**/.buildlog/
+**/.history
+**/.svn/
+**/.swiftpm/
 
 # --- Android ---
 **/android/local.properties
 **/android/app/debug/
-**/android/app/src/debug/
 **/android/app/profile/local
 **/android/app/release/
 **/android/gradlew
@@ -50,6 +56,5 @@
 **/app.*.symbols
 **/app.*.map.json
 
-# --- Entornos De Desarrollo ---
 **/.env
 **/google-services.json
