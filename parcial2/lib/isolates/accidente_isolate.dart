@@ -1,9 +1,11 @@
+import 'package:flutter/material.dart';
+
 import '../models/accidente_model.dart';
 
 class AccidenteIsolate {
   static Map<String, dynamic> procesarDatos(List<dynamic> rawData) {
     final stopwatch = Stopwatch()..start();
-    print("[Isolate] Iniciado — ${rawData.length} registros recibidos");
+    debugPrint("[Isolate] Iniciado — ${rawData.length} registros recibidos");
 
     Map<String, double> clases = {};
     Map<String, double> gravedad = {};
@@ -24,7 +26,7 @@ class AccidenteIsolate {
             .toList();
 
     stopwatch.stop();
-    print("[Isolate] Completado en ${stopwatch.elapsedMilliseconds} ms");
+    debugPrint("[Isolate] Completado en ${stopwatch.elapsedMilliseconds} ms");
 
     return {
       'clases': clases,

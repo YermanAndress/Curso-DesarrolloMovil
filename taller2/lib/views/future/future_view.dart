@@ -53,14 +53,14 @@ class _FutureViewState extends State<FutureView> {
   // !Funcion que obtiene los datos
   // *carga los datos y los asigna a la lista _nombres
   Future<void> obtenerDatos() async {
-    print("1. Antes: Iniciando petición asíncrona..."); // Consola
+    debugPrint("1. Antes: Iniciando petición asíncrona..."); // Consola
 
     // El estado de "Cargando" ya se maneja con _nombres.isEmpty en el build
     final datos = await cargarNombres();
 
     if (!mounted) return;
 
-    print("2. Después: Datos asignados a la UI."); // Consola
+    debugPrint("2. Después: Datos asignados a la UI."); // Consola
     setState(() {
       _nombres = datos;
     });
